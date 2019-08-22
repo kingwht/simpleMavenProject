@@ -3,6 +3,6 @@
 echo "***************************"
 echo "** Testing the code ***********"
 echo "***************************"
-WORKSPACE=/home/jenkins-data/jenkins_home/workspace/pipeline-docker-maven
+WORKSPACE=~/jenkins-data/jenkins_home/workspace/simple-maven-project
 
 docker run --rm -v $WORKSPACE:/app -v /root/.m2/:/root/.m2/ -w /app maven:3-alpine "$@"
