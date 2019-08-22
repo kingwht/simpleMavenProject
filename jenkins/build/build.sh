@@ -7,4 +7,4 @@ echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
 
-cd jenkins/build/ && docker-compose -f docker-compose-build.yml build --no-cache
+cd jenkins/build/ && docker build -f Dockerfile-Java -t maven-project:env.BUILD_ID --no-cache 
