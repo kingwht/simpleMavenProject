@@ -7,4 +7,4 @@ echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
 
-cd jenkins/build && docker build -f Dockerfile-Java -t maven-project:$BUILD_ID --no-cache .
+cd jenkins/build && docker build -f Dockerfile-Java -t maven-project:latest --no-cache .
