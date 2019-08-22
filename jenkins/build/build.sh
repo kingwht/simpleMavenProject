@@ -7,7 +7,7 @@ echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
 
-TAG="${env.BUILD_ID}""
+TAG="${env.BUILD_ID}"
 echo $TAG
 
 cd jenkins/build && docker build -f Dockerfile-Java -t maven-project:"${env.BUILD_ID}" --no-cache .
