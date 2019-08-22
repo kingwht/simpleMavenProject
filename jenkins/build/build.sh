@@ -7,6 +7,5 @@ echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
 
-WORKSPACE=/home/ec2-user/jenkins-data/jenkins_home/workspace/simple-maven-project
 
-docker build -f Dockerfile-Java -t maven-project:env.BUILD_ID --no-cache $WORKSPACE/jenkins/build
+cd jenkins/build && docker build -f Dockerfile-Java -t maven-project:${env.BUILD_ID} --no-cache .
